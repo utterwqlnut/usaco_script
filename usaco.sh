@@ -48,7 +48,7 @@ while true; do
 	elif [ "$commands" = "run" ]
 	then
 		g++ ${file} -o ${file:0:len-4} -std=c++17
-		./${file:0:len-4}
+		${file:0:len-4}
 		returnVal=$(<"${file:0:len-4}.out")
 		if [ ${returnVal} = ${sampleAns} ]; then
 			echo "Sample Case Passed"
