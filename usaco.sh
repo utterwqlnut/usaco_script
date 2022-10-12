@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "-> File Name"
+echo "-> Absolute File Name"
 read file
 echo "-> Sample Input";
 sample=""
