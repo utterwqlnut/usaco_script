@@ -14,6 +14,14 @@ sh pathToFile
 ## Usage
 - First you are prompted to enter the global path
 	- You should use the absolute file path. It should start with /
+	- To find the absolute file path you can do:
+	```sh
+	readlink -f (relativePath)
+	```
+	example:
+	```sh
+	readlink -f ex.cpp
+	```
 - Next you enter your sample input (leave an empty line at the end)
 - Then you enter your sample output (leave an empty line at the end)
 ### Commands
