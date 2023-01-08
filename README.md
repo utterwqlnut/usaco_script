@@ -3,6 +3,7 @@
 >This is a great bash script that makes writing competitive programming code easier <br />
 >Only works for c++ <br />
 > Confirmed to work on Mac and Linux
+>Requires programs to use file io for running
 ## Running
 - You can run the script with 
 ```sh
