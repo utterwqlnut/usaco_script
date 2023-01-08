@@ -54,7 +54,7 @@ while true; do
 			echo "Sample Case Passed"
 		else
 			echo "Sample Case Failed"
-			echo -e "Output was ${returnVal}"
+			echo -e "Output was \n${returnVal}"
 		fi
 	elif [ "$commands" = "new" ]
 	then
