@@ -49,8 +49,20 @@ while true; do
 	then
 		g++ ${file} -o ${file:0:len-4} -std=c++17
 		${file:0:len-4}
-		returnVal=$(<"${file:0:len-4}.out")
-		if [ "${returnVal}" = "${sampleAns}" ]; then
+		returnVal=""
+		outFile=$(cat ${file:0:len-4}.out)
+		cnt=0
+		for line in $outFile
+		do
+			if [ cnt = 0 ]
+			then
+				returnVal="${line}"
+			else
+				returnVal="${returnVal}\n${line}"
+			fi
+			cnt+=1
+		done
+		if [ "${returnVal:2:${#returnVal}}" = "${sampleAns}" ]; then
 			echo "Sample Case Passed"
 		else
 			echo "Sample Case Failed"
@@ -59,7 +71,7 @@ while true; do
 	elif [ "$commands" = "new" ]
 	then
 		echo "-> New Input";
-		sample==""
+		sample=""
 		sampleAns=""
 		read sample
 		while true; do
